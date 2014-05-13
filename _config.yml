@@ -1,7 +1,7 @@
 # Site settings
-title: Photoblog
+title: Photo
 email: poulos.taylor.w@gmail.com
-description: "Improving the eye."
+description: "improving the eye"
 baseurl: ""
 url: "http://yourdomain.com"
 
