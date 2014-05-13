@@ -42,6 +42,7 @@ a:visited { color: #205caa; }
 
 .site-header {
   min-height: 56px;
+  text-align: center;
 }
 
 .site-title,
@@ -51,11 +52,8 @@ a:visited { color: #205caa; }
   color: #333;
   font-size: 26px;
   letter-spacing: -1px;
-  float: left;
   line-height: 56px;
-  position: relative;
   z-index: 1;
-  text-align: center;
 }
 
 .site-nav {
@@ -75,6 +73,7 @@ a:visited { color: #205caa; }
 
 .site-footer {
   padding: 30px 0;
+  text-align: center;
 }
 
 .footer-heading {
