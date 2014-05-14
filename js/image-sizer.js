@@ -1,6 +1,8 @@
 
 ImageResizer = (function(){
-  f = function() {}
+  f = function() {
+    f.margin = 40;
+  }
 
   f.prototype.resize_images = function() {
       var $images = get_images()
@@ -34,8 +36,8 @@ ImageResizer = (function(){
 
     var ratio = resolutions[0][0] / resolutions[0][1]
 
-    resolutions.push([window.innerHeight * ratio, window.innerHeight])
-    resolutions.push([window.innerWidth, window.innerWidth / ratio])
+    resolutions.push([(window.innerHeight - f.margin) * ratio, window.innerHeight - f.margin])
+    resolutions.push([window.innerWidth - f.margin, (window.innerWidth - f.margin) / ratio])
     return resolutions
   }
 
