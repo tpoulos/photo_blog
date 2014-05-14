@@ -8,7 +8,7 @@ layout: default
     {% for post in site.posts %}
       <div class="homepage-post">
         <div class="image-container">
-          <img class="almost-full-screen" src="{{site.baseurl}}/assets/{{post.date | date: "%Y-%m-%d-"}}{{post.image}}">
+          <img class="almost-full-screen {{post.image_size}}" src="{{site.baseurl}}/assets/{{post.date | date: "%Y-%m-%d-"}}{{post.image}}">
         </div>
         <div class="description">
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.description }}</a>

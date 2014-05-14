@@ -404,7 +404,19 @@ a:visited { color: #205caa; }
 }
 
 .description {
-  width: 600px;
+  width: 500px;
   text-align: left;
   margin: auto;
+}
+
+.homepage-post img {
+  width: 800px;
+}
+
+.homepage-post img.wide {
+  width: 1000px;
+}
+
+.homepage-post img.narrow {
+  width: 500px;
 }

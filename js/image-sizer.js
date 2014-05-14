@@ -54,6 +54,6 @@ ImageResizer = (function(){
 }())
 
 $(window).ready(function() {
-  var i = new ImageResizer
-  i.init();
+  //var i = new ImageResizer
+  //i.init();
 })
