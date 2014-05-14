@@ -1,37 +1,48 @@
-$(window).ready(function() {
-  resize_images()
-})
 
-function resize_images() {
-    var $images = get_images()
+ImageResizer = (function(){
+  f = function() {}
 
-    $images.each(function(image_index, image) {
-      resize_image($(image))
+  f.prototype.resize_images = function() {
+      var $images = get_images()
+
+      $images.each(function(image_index, image) {
+        resize_image($(image))
+      })
+  }
+
+
+
+  function get_images() {
+    return $(".almost-full-screen")
+  }
+
+
+  function resize_image($image) {
+    var resolutions = get_resolutions($image)
+    resolutions.sort(function(a, b) {
+      return (a[0] * a[1]) - (b[0] * b[1])
     })
-}
 
-function get_images() {
-  return $(".almost-full-screen")
-}
+    $image.width(resolutions[0][0])
+    $image.height(resolutions[0][1])
+  }
 
-function resize_image($image) {
-  var resolutions = get_resolutions($image)
-  resolutions.sort(function(a, b) {
-    return (a[0] * a[1]) - (b[0] * b[1])
-  })
+  function get_resolutions($image) {
+    var resolutions = []
 
-  $image.width(resolutions[0][0])
-  $image.height(resolutions[0][1])
-}
+    resolutions.push([$image.width(), $image.height()])
 
-function get_resolutions($image) {
-  var resolutions = []
+    var ratio = resolutions[0][0] / resolutions[0][1]
 
-  resolutions.push([$image.width(), $image.height()])
+    resolutions.push([window.innerHeight * ratio, window.innerHeight])
+    resolutions.push([window.innerWidth, window.innerWidth / ratio])
+    return resolutions
+  }
 
-  var ratio = resolutions[0][0] / resolutions[0][1]
+  return f;
+}())
 
-  resolutions.push([window.innerHeight * ratio, window.innerHeight])
-  resolutions.push([window.innerWidth, window.innerWidth / ratio])
-  return resolutions
-}
+$(window).ready(function() {
+  var i = new ImageResizer
+  i.resize_images();
+})
