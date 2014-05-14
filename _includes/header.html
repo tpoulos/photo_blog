@@ -8,14 +8,9 @@
 
     <p class="text">{{ site.description }}</p>
 
-
-    <nav class="site-nav">
-      <div class="trigger">
-        {% for page in site.pages %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endfor %}
-      </div>
-    </nav>
+    <p class="text">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
 
   </div>
 
