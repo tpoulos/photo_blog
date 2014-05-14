@@ -4,5 +4,5 @@ title:  "Ritter's Diner"
 date:   2014-05-01 15:18:44
 image: diner.jpg
 description: "Ritter's Diner, Pittsburgh, PA"
-image_size: narrow
+image_size: tall
 ---
