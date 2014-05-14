@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post">
 
-  <img src="{{site.baseurl}}/assets/{{page.date | date: "%Y-%m-%d-"}}{{page.image}}">
+  <img class="almost-full-screen" src="{{site.baseurl}}/assets/{{page.date | date: "%Y-%m-%d-"}}{{page.image}}">
   <p>{{ page.description }}</p>
   <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 
