@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="page-image">
 
-  <img class="almost-full-screen" src="{{site.baseurl}}/assets/{{page.date | date: "%Y-%m-%d-"}}{{page.image}}">
-  <p>{{ page.description }}</p>
-  <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  <img class="almost-full-screen {{page.image_size}}" src="{{site.baseurl}}/assets/{{page.date | date: "%Y-%m-%d-"}}{{page.image}}">
+  <p class="description">{{ page.description }}<br>
+    {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+  </p>
 
 </div>
