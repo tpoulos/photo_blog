@@ -4,6 +4,14 @@ ImageResizer = (function(){
     f.margin = 40;
   }
 
+  f.prototype.init = function() {
+    this.resize_images();
+    $(window).resize(function() {
+      console.log("hiya")
+      this.resize_images();
+    }.bind(this))
+  }
+
   f.prototype.resize_images = function() {
       var $images = get_images()
 
@@ -11,7 +19,6 @@ ImageResizer = (function(){
         resize_image($(image))
       })
   }
-
 
 
   function get_images() {
@@ -32,7 +39,9 @@ ImageResizer = (function(){
   function get_resolutions($image) {
     var resolutions = []
 
-    resolutions.push([$image.width(), $image.height()])
+    var rawImage = new Image();
+    rawImage.src = $image.attr('src'); // path to image
+    resolutions.push([rawImage.width, rawImage.height])
 
     var ratio = resolutions[0][0] / resolutions[0][1]
 
@@ -46,5 +55,5 @@ ImageResizer = (function(){
 
 $(window).ready(function() {
   var i = new ImageResizer
-  i.resize_images();
+  i.init();
 })
