@@ -1,0 +1,8 @@
+---
+layout: post-image
+title:  "Mt Pleasant Cemetery"
+date:   2014-05-15 15:19:44
+image: "4x4.jpg"
+description: "Jeep 4x4 on Tolmand St., Rockport, ME"
+image_size: wide
+---
