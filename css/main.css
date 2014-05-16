@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 
 body {
   font-family: "Arbutus Slab", Georgia, serif;
@@ -14,14 +14,13 @@ body {
   line-height: 1.5;
   background-color: #fcfcfc;
   text-align: center;
+  padding-bottom: 120px;
 }
 
 
 .site-header {
-  margin-top: 54px;
-  left: 0;
-  right: 0;
-  top: 0;
+  margin-top: 120px;
+  margin-bottom: 80px;
 }
 
 .site-title {
