@@ -1,7 +1,7 @@
 # Site settings
 title: "Photographs"
 email: poulos.taylor.w@gmail.com
-baseurl: "/photo_blog/"
+baseurl: "/photo_blog"
 url: "http://yourdomain.com"
 
 # Build settings
